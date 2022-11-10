@@ -1,14 +1,13 @@
-﻿namespace Tracer.Core
-{
-    public interface ITracer
-    {
-        // Call at start
-        void StartTrace();
+﻿namespace Tracer.Core;
 
-        // Call at the end
-        void StopTrace();
-        
-        // Shoud return measurement results
-        TraceResult GetTraceResult();
-    }
+public interface ITracer
+{
+    // Call at start
+    void StartTrace();
+
+    // Call at the end
+    void StopTrace();
+    
+    // Shoud return measurement results
+    TraceResult GetTraceResult();
 }

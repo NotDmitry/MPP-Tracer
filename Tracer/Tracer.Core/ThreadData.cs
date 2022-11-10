@@ -4,14 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tracer.Core;
-
-public class TraceResult
+namespace Tracer.Core
 {
-
-    public TraceResult()
-    {
+    internal class ThreadData
+    { 
+        
     }
-
 }
-
