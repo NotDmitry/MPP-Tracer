@@ -7,13 +7,14 @@ namespace Tracer.Serialization.Yaml
     public class YamlTracerSerializer : ITraceResultSerializer
     {
         public string Format { get; } = ".yaml";
-
         public void Serialize(TraceResult traceResult, Stream to)
         {
+            var yamlData = new YamlTraceResult(traceResult);
+
             var yamlSerializer = new Serializer();
             using (var writer = new StreamWriter(to)) 
             { 
-                yamlSerializer.Serialize(writer, traceResult);
+                yamlSerializer.Serialize(writer, yamlData);
             }
 
         }
