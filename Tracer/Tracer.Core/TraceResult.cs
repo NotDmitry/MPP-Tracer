@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tracer.Core;
+﻿namespace Tracer.Core;
 
 public class TraceResult
 {
 
-    public TraceResult()
+    public IReadOnlyList<ThreadData> RunningThreads { get; }
+
+    public TraceResult(IReadOnlyList<ThreadData> runningThreads)
     {
+        RunningThreads = runningThreads;
     }
 
 }

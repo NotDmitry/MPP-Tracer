@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Tracer.Core;
 
-namespace Tracer.Core
-{
-    internal class ThreadData
-    { 
-        
+public class ThreadData
+{ 
+    public int ThreadId { get; set; }
+    public TimeSpan ThreadElapsedTime { get; set; }
+    public List<MethodData> RootMethods{ get; set; }
+    public ThreadData(int threadId)
+    {
+        ThreadId = threadId;
+        RootMethods = new();
     }
+    
 }

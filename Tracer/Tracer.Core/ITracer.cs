@@ -8,6 +8,6 @@ public interface ITracer
     // Call at the end
     void StopTrace();
     
-    // Shoud return measurement results
+    // Return measurement results
     TraceResult GetTraceResult();
 }
