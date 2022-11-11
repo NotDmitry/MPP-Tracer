@@ -50,14 +50,19 @@ public class Tracer : ITracer
         if (_threadsData[threadID].ThreadStack.TryPop(out var methodData))
         {
             methodData.MethodWatch.Stop();
-            methodData.MethodElapsedTime = methodData.MethodWatch.Elapsed;
+            methodData.MethodElapsedTime = methodData.MethodWatch.ElapsedMilliseconds;
         }
     }
 
     //
     public TraceResult GetTraceResult()
     {
-        throw new NotImplementedException();
+        foreach (var thread in _threadsData)
+        {
+            thread.Value.ThreadElapsedTime = thread.Value.RootMethods.Select(x => x.MethodElapsedTime).Sum();
+        }
+
+        return new TraceResult(_threadsData.Values.ToList());
     }
 
 }
