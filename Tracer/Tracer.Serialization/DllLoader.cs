@@ -45,10 +45,10 @@ public class DllLoader
     {
         foreach (var plugin in pluginList)
         {
-            var i = 1;
-            using (FileStream fstream = new FileStream($"{i++}.txt", FileMode.Create))
+            using (FileStream fstream = new FileStream($"Output{plugin.Format}", FileMode.Create))
             {
                 plugin.Serialize(traceResult, fstream);
+                
             }
         }
     }

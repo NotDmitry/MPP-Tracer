@@ -6,7 +6,7 @@ namespace Tracer.Serialization.Json;
 
 public class JsonTracerSerializer: ITraceResultSerializer
 {
-    public string Format { get; } = "undefined";
+    public string Format { get; } = ".json";
 
     public void Serialize(TraceResult traceResult, Stream to)
     {
