@@ -8,12 +8,13 @@ public class MethodData
     public string DeclaringClassName { get; set; }
     public Stopwatch MethodWatch { get; set; }
     public List<MethodData> NestedMethods { get; set; }
+    public TimeSpan MethodElapsedTime { get; set; } = TimeSpan.Zero; 
 
-    public MethodData(string methodName, string declaringClassName, Stopwatch methodWatch)
+    public MethodData(string methodName, string declaringClassName)
     {
         MethodName = methodName;
         DeclaringClassName = declaringClassName;
-        MethodWatch = methodWatch;
+        MethodWatch = new();
         NestedMethods = new(); 
     }
      
