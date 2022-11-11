@@ -10,8 +10,9 @@ public class XmlTracerSerializer : ITraceResultSerializer
 
     public void Serialize(TraceResult traceResult, Stream to)
     {
-        XmlSerializer serializer = new XmlSerializer(typeof(TraceResult));
-        serializer.Serialize(to, traceResult);
+        var xmlData = new XmlTraceResult(traceResult);
+        XmlSerializer serializer = new XmlSerializer(typeof(XmlTraceResult));
+        serializer.Serialize(to, xmlData);
 
     }
 }
