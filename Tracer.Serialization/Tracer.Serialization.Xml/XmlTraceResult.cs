@@ -6,7 +6,9 @@ namespace Tracer.Serialization.Xml;
 public class XmlTraceResult
 {
     [XmlElement("threads")]
-    public IReadOnlyList<XmlThreadData> RunningThreads { get; }
+    public List<XmlThreadData> RunningThreads;
+
+    public XmlTraceResult() => RunningThreads = new List<XmlThreadData>();
 
     public XmlTraceResult(TraceResult traceResult)
     {

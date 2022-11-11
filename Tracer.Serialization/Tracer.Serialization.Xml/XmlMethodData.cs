@@ -6,16 +6,16 @@ namespace Tracer.Serialization.Xml;
 public class XmlMethodData
 {
     [XmlAttribute("name")]
-    public string MethodName { get; set; } = string.Empty;
+    public string MethodName = string.Empty;
 
     [XmlAttribute("class")]
-    public string DeclaringClassName { get; set; } = string.Empty;
+    public string DeclaringClassName = string.Empty;
 
     [XmlAttribute("time")]
-    public string MethodElapsedTime { get; set; } = string.Empty;
+    public string MethodElapsedTime = string.Empty;
 
     [XmlElement("methods")]
-    public List<XmlMethodData> NestedMethods { get; set; }
+    public List<XmlMethodData> NestedMethods;
 
     public XmlMethodData() => NestedMethods = new List<XmlMethodData>();
 

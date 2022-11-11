@@ -6,13 +6,13 @@ namespace Tracer.Serialization.Xml;
 public class XmlThreadData
 {
     [XmlAttribute("id")]
-    public int ThreadId { get; set; } = 0;
+    public int ThreadId = 0;
 
     [XmlAttribute("time")]
-    public string ThreadElapsedTime { get; set; } = string.Empty;
+    public string ThreadElapsedTime = string.Empty;
 
     [XmlElement("methods")]
-    public List<XmlMethodData> RootMethods { get; set; }
+    public List<XmlMethodData> RootMethods;
 
     public XmlThreadData() => RootMethods = new List<XmlMethodData>();
     public XmlThreadData(ThreadData threadData)
