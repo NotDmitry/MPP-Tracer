@@ -1,9 +1,10 @@
 ﻿using Tracer.Core;
 using System.Xml.Serialization;
+using Tracer.Serialization.Abstractions;
 
 namespace Tracer.Serialization.Xml;
 
-public class XmlTracerSerializer
+public class XmlTracerSerializer : ITraceResultSerializer
 {
     public string Format { get; } = ".xml";
 

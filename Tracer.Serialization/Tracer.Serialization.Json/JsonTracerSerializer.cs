@@ -15,7 +15,8 @@ public class JsonTracerSerializer: ITraceResultSerializer
             WriteIndented = true
         };
 
-        JsonSerializer.Serialize(to, traceResult, jsonOptions);
+        var jsonData = new JsonTraceResult(traceResult);
+        JsonSerializer.Serialize(to, jsonData, jsonOptions);
 
     }
 }

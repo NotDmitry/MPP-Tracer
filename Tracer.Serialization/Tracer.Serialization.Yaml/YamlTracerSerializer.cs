@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Tracer.Core;
+﻿using Tracer.Core;
 using Tracer.Serialization.Abstractions;
 using YamlDotNet.Serialization;
 
 namespace Tracer.Serialization.Yaml
 {
-    public class YamlTracerSerializer
+    public class YamlTracerSerializer : ITraceResultSerializer
     {
         public string Format { get; } = ".yaml";
 
