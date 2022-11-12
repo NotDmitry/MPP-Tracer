@@ -4,6 +4,7 @@ using Tracer.Serialization.Abstractions;
 
 namespace Tracer.Serialization.Xml;
 
+// Convert TraceResult object into XML format
 public class XmlTracerSerializer : ITraceResultSerializer
 {
     public string Format { get; } = ".xml";

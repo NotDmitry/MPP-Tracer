@@ -1,5 +1,6 @@
 ﻿namespace Tracer.Core;
 
+// Result view
 public class TraceResult
 {
 

@@ -2,6 +2,7 @@
 
 namespace Tracer.Core;
 
+// Contains data reated to methods
 public class MethodData
 {
     public string MethodName { get; set; }

@@ -3,6 +3,7 @@ using Tracer.Core;
 
 namespace Tracer.Serialization.Xml;
 
+// Copy of TraceResult from Tracer.Core for using with XML attributes
 public class XmlTraceResult
 {
     [XmlElement("threads")]

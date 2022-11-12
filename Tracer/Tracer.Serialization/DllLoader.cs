@@ -4,6 +4,7 @@ using Tracer.Serialization.Abstractions;
 
 namespace Tracer.Serialization;
 
+// Call static methods of this class to get the list of available plugins
 public class DllLoader
 {
 
@@ -40,6 +41,7 @@ public class DllLoader
 
     }
 
+    // Use only with ITraceResultSerializer
     public static void PrintSerializeResult(IEnumerable<ITraceResultSerializer> pluginList, 
         TraceResult traceResult)
     {

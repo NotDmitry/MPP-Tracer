@@ -4,6 +4,7 @@ using System.Text.Json;
 
 namespace Tracer.Serialization.Json;
 
+// Convert TraceResult object into JSON format
 public class JsonTracerSerializer: ITraceResultSerializer
 {
     public string Format { get; } = ".json";

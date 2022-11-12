@@ -6,10 +6,10 @@ namespace Tracer.Core;
 
 public class Tracer : ITracer
 {
-
+    // All threads are available in dictionary by their ID
     private readonly ConcurrentDictionary<int, ThreadData> _threadsData = new();
 
-    //
+    // Start tracing
     public void StartTrace()
     {
         StackTrace stackTracer = new();
@@ -32,13 +32,13 @@ public class Tracer : ITracer
         else
             currentThreadData.ThreadStack.First().NestedMethods.Add(runningMethodData);
 
+        // Push method to stack for working with nested methods and stopping the watch
         currentThreadData.ThreadStack.Push(runningMethodData);
         runningMethodData.MethodWatch.Start();
 
-
     }
 
-    //
+    // Finish tracing
     public void StopTrace()
     {
         int threadID = Thread.CurrentThread.ManagedThreadId;
@@ -49,7 +49,7 @@ public class Tracer : ITracer
         }
     }
 
-    //
+    // Return result structure
     public TraceResult GetTraceResult()
     {
         foreach (var thread in _threadsData)

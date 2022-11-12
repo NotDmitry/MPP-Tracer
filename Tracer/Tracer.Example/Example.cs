@@ -25,7 +25,7 @@ var traceResult = tracer.GetTraceResult();
 var dlls = DllLoader.LoadPlugins<ITraceResultSerializer>("D:\\VsRepos\\MPP\\MPP-Tracer\\Tracer\\Tracer.Example\\plugins");
 DllLoader.PrintSerializeResult(dlls, traceResult);
 
-
+// Debugging classes
 public class Foo
 {
     private Bar _bar;

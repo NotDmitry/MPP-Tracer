@@ -3,6 +3,7 @@ using YamlDotNet.Serialization;
 
 namespace Tracer.Serialization.Yaml;
 
+// Copy of TraceResult from Tracer.Core for using with YAML attributes
 public class YamlTraceResult
 {
     [YamlMember(Alias = "threads")]

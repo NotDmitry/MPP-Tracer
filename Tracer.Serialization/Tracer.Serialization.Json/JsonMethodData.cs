@@ -3,6 +3,7 @@ using Tracer.Core;
 
 namespace Tracer.Serialization.Json;
 
+// Copy of MethodData from Tracer.Core for using with JSON attributes
 public class JsonMethodData
 {
     [JsonPropertyName("name")]

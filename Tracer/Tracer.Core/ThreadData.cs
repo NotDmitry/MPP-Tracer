@@ -2,6 +2,7 @@
 
 namespace Tracer.Core;
 
+// Contains data reated to threads
 public class ThreadData
 { 
     public int ThreadId { get; set; }

@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Tracer.Serialization.Json;
 
+// Copy of ThreadData from Tracer.Core for using with JSON attributes
 public class JsonThreadData
 {
     [JsonPropertyName("id")]
